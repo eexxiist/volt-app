@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --bg:      #0E0F11;
+  --bg-2:    #16181C;
+  --bg-3:    #1E2128;
+  --surface: #252830;
+  --border:  #2E3139;
+  --border-2:#3A3F4A;
+  --ink:     #F0F1F3;
+  --ink-2:   #A0A6B4;
+  --ink-3:   #6B7180;
+  --accent:  #4F7EFF;
+  --accent-h:#3D6FEE;
+  --accent-g:rgba(79,126,255,.15);
+  --green:   #2ECC71;
+  --red:     #E74C3C;
+  --ff: 'Inter', sans-serif;
+  --fh: 'Space Grotesk', sans-serif;
+  --r: 8px;
+  --r-lg: 14px;
+  --t: .18s ease;
+  --shadow: 0 4px 20px rgba(0,0,0,.5);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; scroll-behavior: smooth; }
+body {
+  font-family: var(--ff);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+a { color: inherit; text-decoration: none; }
+button { font-family: var(--ff); cursor: pointer; border: none; background: none; }
+img { display: block; max-width: 100%; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-2); }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 99px; }
+
+/* ── Bootstrap modal overrides ── */
+.modal-content {
+  background: var(--bg-2) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--ink) !important;
+  border-radius: var(--r-lg) !important;
+}
+.modal-header { border-bottom: 1px solid var(--border) !important; padding: 16px 20px !important; }
+.modal-title { font-family: var(--fh) !important; font-size: 16px !important; font-weight: 600 !important; }
+.modal-footer { border-top: 1px solid var(--border) !important; }
+.modal-body { padding: 20px !important; }
+.btn-close { filter: invert(1) !important; opacity: .6 !important; }
+
+.form-control {
+  background: var(--bg-3) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--ink) !important;
+  border-radius: var(--r) !important;
+  font-family: var(--ff) !important;
+  font-size: 13px !important;
+  padding: 9px 12px !important;
+}
+.form-control:focus {
+  background: var(--bg-3) !important;
+  border-color: var(--accent) !important;
+  color: var(--ink) !important;
+  box-shadow: 0 0 0 3px var(--accent-g) !important;
+}
+.form-control::placeholder { color: var(--ink-3) !important; }
+
+.dropdown-menu {
+  background: var(--bg-2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--r) !important;
+  padding: 6px !important;
+  box-shadow: var(--shadow) !important;
+}
+.dropdown-item {
+  color: var(--ink-2) !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  padding: 7px 12px !important;
+}
+.dropdown-item:hover { background: var(--bg-3) !important; color: var(--ink) !important; }
+.dropdown-toggle {
+  background: var(--bg-3) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--ink-2) !important;
+  border-radius: var(--r) !important;
+  font-size: 13px !important;
+  padding: 8px 14px !important;
+}
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+  border-color: var(--accent) !important;
+  color: var(--ink) !important;
+  box-shadow: none !important;
+}
+
+.pagination { gap: 4px; }
+.page-link {
+  background: var(--bg-2) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--ink-2) !important;
+  border-radius: var(--r) !important;
+  font-size: 13px !important;
+  padding: 6px 12px !important;
+  transition: var(--t) !important;
+}
+.page-link:hover { border-color: var(--accent) !important; color: var(--accent) !important; background: var(--accent-g) !important; }
+.page-item.active .page-link { background: var(--accent) !important; border-color: var(--accent) !important; color: #fff !important; }
+
+.btn-outline-danger { color: var(--red) !important; border-color: var(--red) !important; background: transparent !important; border-radius: var(--r) !important; font-size: 13px !important; }
+.btn-outline-danger:hover { background: rgba(231,76,60,.1) !important; }
+.btn-outline-success { color: var(--green) !important; border-color: var(--green) !important; background: transparent !important; border-radius: var(--r) !important; font-size: 13px !important; }
+.btn-outline-success:hover { background: rgba(46,204,113,.1) !important; }
+.btn-outline-dark { color: var(--ink-2) !important; border-color: var(--border-2) !important; background: transparent !important; border-radius: var(--r) !important; font-size: 13px !important; }
+.btn-outline-dark:hover { background: var(--bg-3) !important; color: var(--ink) !important; }
